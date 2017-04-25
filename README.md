@@ -1,4 +1,4 @@
-#Book a Room
+# Room Booking
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
@@ -28,6 +28,10 @@ The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
 
 See the section about [deployment](#deployment) for more information.
+
+### `npm run flow` or `yarn flow`
+
+Checks files for type errors.
 
 ### `npm run eject`
 
