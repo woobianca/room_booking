@@ -1,5 +1,13 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'sofiapro-light';
+}
+
+@font-face {
+    font-family: 'sofiapro-light';
+    src: local('sofiapro-light'), url('./fonts/sofiapro-light-webfont.woff2') format('woff2'),
+         local('sofiapro-light'), url('./fonts/sofiapro-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
