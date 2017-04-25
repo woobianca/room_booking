@@ -11,8 +11,8 @@ class RoomListItem extends React.Component {
 
 	render() {
 		return (
-			<div>
-				{this.props.room.name}
+			<div className="roomItemCell">
+				<h2>Room {this.props.room.name}</h2>
 			</div>
 		);
 	}

@@ -40,7 +40,6 @@ class Rooms extends React.Component {
 			</div>
 		) 
 	}
-
 }
 
 export default Rooms;

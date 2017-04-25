@@ -7,9 +7,9 @@ const RoomList = (props) => {
 	const rooms = props.rooms.map(room => {
 		return <RoomListItem key={room.name} room={room} />
 	})
-	
+
 	return (
-		<div>
+		<div className="container">
 			{rooms}
 		</div>
 	);
