@@ -4,12 +4,12 @@ import './RoomList.css';
 
 const RoomList = (props) => {
 
-	const rooms = props.rooms.map(room => {
-		return <RoomListItem key={room.name} room={room} />
+	const rooms = props.rooms.map((room, i) => {
+		return <RoomListItem key={i} room={room} />
 	})
 
 	return (
-		<div className="container">
+		<div className="list-container">
 			{rooms}
 		</div>
 	);

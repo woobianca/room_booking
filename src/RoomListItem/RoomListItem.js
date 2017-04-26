@@ -10,9 +10,12 @@ class RoomListItem extends React.Component {
 	}
 
 	render() {
+		const {name, location, capacity} = this.props.room;
 		return (
-			<div className="roomItemCell">
-				<h2>Room {this.props.room.name}</h2>
+			<div className="room-container">
+				<h2>Room {name}</h2>
+				<h4>{location}</h4>
+				<h4>Fits {capacity} people</h4>
 			</div>
 		);
 	}
