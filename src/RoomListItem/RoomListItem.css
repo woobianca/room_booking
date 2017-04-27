@@ -1,8 +1,9 @@
 .room-container {
-	flex: 1 1 100%; /*lets your flex item shrink/grow depending on screen size*/
-  display: block;
+	/*flex: 1 1 100%; lets your flex item shrink/grow depending on screen size*/
+  display: flex;
+  flex-flow: row wrap;
   align-content: center;
-	position: relative;
+	/*position: relative;*/
   transition: background-color 0.3s ease;
   border: 1px solid grey;
   border-radius: 3px;
@@ -14,6 +15,22 @@
   opacity:.8;
   box-shadow: 0 4px 2px rgba(0,0,0,0.175);
 }
+
+.room-info {
+  display: flex;
+  flex-flow: column wrap;
+  width: 15%;
+  margin-left: 20px;
+}
+
+.times-display {
+  display: flex;
+  align-self: flex-start;
+  width: 75%;
+  margin-top: 25px;
+  margin-left: 30px;
+}
+
 
 @media (max-width: 632px) {
 
