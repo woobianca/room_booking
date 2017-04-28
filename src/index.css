@@ -1,7 +1,8 @@
 body {
-  margin: 0;
-  padding: 0;
+  margin: auto;
+  padding: auto;
   font-family: 'sofiapro-light';
+  background-color: rgba(0,0,0,0.04);
 }
 
 @font-face {
@@ -10,4 +11,8 @@ body {
          local('sofiapro-light'), url('./fonts/sofiapro-light-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+}
+
+@media (max-width: 575px) {
+  width: 100%;
 }

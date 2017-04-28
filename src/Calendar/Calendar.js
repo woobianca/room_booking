@@ -11,9 +11,6 @@ class Calendar extends React.Component {
   
   handleDayClick = (day, { disabled, selected }) => {
     const unixTime = day.valueOf() / 1000;
-    // this.setState({ 
-    //   selectedDay: unixTime
-    // })
     this.props.fetchRooms(unixTime)
   }
 

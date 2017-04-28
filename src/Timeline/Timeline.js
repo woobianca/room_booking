@@ -18,6 +18,7 @@ class Timeline extends React.Component {
     let bgColor = 'lightGrey'
     let lineColor = 'white'
     let lineWidth = 0;
+    let cursor = null;
     let result = [];
       const times = this.props.room.avail.map((time, i) => {
         var splitTimes = time.split(/[\{:},\s]+/)
@@ -40,13 +41,15 @@ class Timeline extends React.Component {
         i % 4 === 0 ? lineWidth = 3 : lineWidth = 1;
           for (var k = 0; k < result.length; k++) {
             if (i > result[k][0] && i <= result[k][1]) {
-              bgColor = '#9ABD36'
+              bgColor = '#9ABD36';
+              cursor = 'pointer';
             } else if (i >= result[k][0] && i >= result[k][1]){
-              bgColor = 'lightGrey';
+              bgColor = 'lightGrey'
+              cursor = null;
             }
           }
         divs.slots.push(<div className="time-slot"
-          style={{borderRightWidth:lineWidth, backgroundColor: bgColor}} id={i+1} key={i}></div>);
+          style={{borderRightWidth:lineWidth, backgroundColor: bgColor, cursor}} id={i+1} key={i}></div>);
       }
       for (var j = 7; j < 20; j++) {
         divs.labels.push(<div className="time-hour" key={`${j}:00`}>{`${j}:00`}</div>);
