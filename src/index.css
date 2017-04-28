@@ -3,6 +3,7 @@ body {
   padding: auto;
   font-family: 'sofiapro-light';
   background-color: rgba(0,0,0,0.04);
+  padding-bottom: 100px;
 }
 
 @font-face {

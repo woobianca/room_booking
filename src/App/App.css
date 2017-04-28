@@ -50,7 +50,7 @@
   margin: auto 20px;  
 }
 
-@media screen and (max-width:1030px) {
+@media screen and (max-width:1080px) {
   .container { 
     flex-wrap: wrap;
     margin: auto 15px;  

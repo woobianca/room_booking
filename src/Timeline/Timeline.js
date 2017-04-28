@@ -7,18 +7,27 @@ import './Timeline.css';
 class Timeline extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      selectedTime: null
+    }
+    this.clickTimeSlot = this.clickTimeSlot.bind(this);
   }
 
   update() {
     this.rnd.updateSize({ width: 200, height: 300 });
   }
 
+  clickTimeSlot(e) {
+    var timeSlot = e.target.getAttribute("data-time");
+    var isAvail = e.target.getAttribute("data-avail");
+    console.log('TIME: ', e.target.getAttribute("data-time"))
+
+  }
+
   render() {
     console.log(this.props.room.name, ': ',this.props.room.avail)
-    let bgColor = 'lightGrey'
-    let lineColor = 'white'
+    let className = 'avail';
     let lineWidth = 0;
-    let cursor = null;
     let result = [];
       const times = this.props.room.avail.map((time, i) => {
         var splitTimes = time.split(/[\{:},\s]+/)
@@ -41,15 +50,17 @@ class Timeline extends React.Component {
         i % 4 === 0 ? lineWidth = 3 : lineWidth = 1;
           for (var k = 0; k < result.length; k++) {
             if (i > result[k][0] && i <= result[k][1]) {
-              bgColor = '#9ABD36';
-              cursor = 'pointer';
+              className = 'avail';
             } else if (i >= result[k][0] && i >= result[k][1]){
-              bgColor = 'lightGrey'
-              cursor = null;
+              className = 'not-avail';
             }
           }
-        divs.slots.push(<div className="time-slot"
-          style={{borderRightWidth:lineWidth, backgroundColor: bgColor, cursor}} id={i+1} key={i}></div>);
+        divs.slots.push(<div className={`time-slot ${className}`}
+          style={{borderRightWidth:lineWidth}} 
+          key={i}
+          >
+            <div className="hover" data-time={i} onClick={(e) => this.props.onClickTime(e)}> + </div>
+          </div>);
       }
       for (var j = 7; j < 20; j++) {
         divs.labels.push(<div className="time-hour" key={`${j}:00`}>{`${j}:00`}</div>);

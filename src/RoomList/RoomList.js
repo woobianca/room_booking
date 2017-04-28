@@ -5,7 +5,7 @@ import './RoomList.css';
 const RoomList = (props) => {
 
 	const rooms = props.rooms.map((room, i) => {
-		return <RoomListItem key={i} room={room} />
+		return <RoomListItem key={i} room={room} selectedDay={props.selectedDay}/>
 	})
 
 	return (

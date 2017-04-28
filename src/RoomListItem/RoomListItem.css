@@ -19,18 +19,18 @@
   display: flex;
   flex-flow: column wrap;
   width: 120px;
-  margin-left: 20px;
+  margin-left: 10px;
   margin-top: 10px;
+  cursor: pointer;
 }
 
 .times-display {
   display: flex;
   flex: flex-shrink;
-  align-self: flex-start;
+  align-self: center;
   width: auto;
   max-width: 75%;
-  margin-top: 25px;
-  margin-left: 30px;
+  margin: auto;
 }
 
 .room-name {
@@ -43,25 +43,44 @@
   margin-bottom: 10px;
 }
 
-.room-capacity{
+.room-capacity {
   margin: 0;
   margin-bottom: 10px;
 }
 
+.expand-icon {
+  display: flex;
+  flex-flow: column nowrap;
+  font-size: 24px;
+  align-self: center;
+}
 
-/*@media (max-width: 1285px) {
-  .times-display {
-    width: auto;
-    font-size: 10pt;
-  }
-}*/
+.default-view {
+  display: flex;
+  flex: flex-shrink;
+  flex-flow: row wrap;
+  align-content: center;
+}
 
-@media (max-width: 750px) {
+.room-details {
+  display: flex;
+  margin-left: 50px;
+  /*flex-direction: column-reverse;*/
+  height: auto;
+}
+
+.booking-form {
+  display: flex;
+  margin: auto;
+}
+
+@media (max-width: 770px) {
   .room-container {
-    flex-flow: column wrap;
+    flex-flow: row wrap;
     margin: 10px;
   }
   .times-display {
+    order: 1;
     width: 100%;
     margin: 5px auto 30px auto;
     justify-content: center;
@@ -69,9 +88,11 @@
   }
   .room-info {
     margin: auto;
+    margin-top: 10px;
     flex-flow: row wrap;
-    width: 100%;
+    width: 70%;
     justify-content: space-around;
+    align-self: center;
   }
   .room-name {
     order: 1;
@@ -88,24 +109,49 @@
     margin: 0;
     margin-bottom: 5px;
   }
+  .expand-icon {
+    order: 1;
+    flex-flow: row nowrap;
+    align-content: flex-end;
+    padding-right: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+  }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 600px) {
+  .default-view {
+    margin: auto;
+    flex-flow: column wrap;
+    align-self: flex-start;
+  }
   .times-display {
     -moz-transform: translateX(-50%) translateY(-50%) rotate(-90deg);
        -webkit-transform: translateX(-50%) translateY(-50%) rotate(-90deg);
        transform:  translateX(-50%) translateY(-50%) rotate(-90deg);
-       margin: auto;
+       justify-content: flex-start;
+      margin: auto;
   }
   .room-info {
-    margin-top: 15px;
-    margin-bottom: 0;
-    flex-flow: row wrap;
-    width: 100%;
-    height: 50px;
+    width: 120px;
+    margin: auto;
+ }
+  .room-name {
+    order: 0;
+  }
+  .room-capacity {
+    order: 0;
   }
   .room-container {
     margin: 10px;
     height: 600px;
+    flex-flow: column wrap;
+    justify-content: flex-end;
+  }
+  .expand-icon {
+    display: none;
+  }
+  .room-details {
+    display: none;
   }
 }

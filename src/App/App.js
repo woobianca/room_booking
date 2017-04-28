@@ -55,7 +55,7 @@ class App extends Component {
         <div className="color-bar"></div>
         <div className="container">
           <Calendar fetchRooms={this.fetchRooms}/>
-          <RoomList rooms={this.state.rooms} />
+          <RoomList rooms={this.state.rooms} selectedDay={this.state.selectedDay}/>
         </div>
       </div>
     );
