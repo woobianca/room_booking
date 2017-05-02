@@ -1,5 +1,9 @@
 # Room Booking
 
+Fetch room data and visualize available times in custom built timeline component.
+
+[View Project Demo](https://woobianca.github.io/room_booking/)
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 ## Available Scripts
